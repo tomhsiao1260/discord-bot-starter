@@ -11,4 +11,8 @@ client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`)
 })
 
+client.on('messageCreate', message => {
+  if (message.content === 'Hi') { message.reply('Hello') }
+})
+
 client.login(process.env.DISCORD_TOKEN)
